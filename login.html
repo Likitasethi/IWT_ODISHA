@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+</head>
+<body>
+  <h2>Login</h2>
+  <form id="loginForm">
+    <label for="username">Username:</label>
+    <input type="text" id="username" required>
+    <label for="password">Password:</label>
+    <input type="password" id="password" required>
+    <button type="button" onclick="login()">Login</button>
+  </form>
+</body>
+<script>
+
+function login() {
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+
+  // Predefined admin and travel agency credentials
+  const adminUsername = "admin";
+  const adminPassword = "admin123";
+  const agencyUsername = "agency";
+  const agencyPassword = "agency123";
+
+  // Retrieve user credentials from localStorage
+  const storedUsername = localStorage.getItem("user_username");
+  const storedPassword = localStorage.getItem("user_password");
+
+  // Check if the input matches any predefined credentials
+  if (username === adminUsername && password === adminPassword) {
+    // Redirect to admin dashboard
+    window.location.href = "ADMIN/admin_dashboard.html";
+  } else if (username === agencyUsername && password === agencyPassword) {
+    // Redirect to agency dashboard
+    window.location.href = "TRAVEL_AGENCY/dashboard.html";
+  } else if (username === storedUsername && password === storedPassword) {
+    // Redirect to user dashboard
+    window.location.href = "USER/hero.html";
+  } else {
+    alert("Invalid credentials");
+  }
+}
+
+
+</script>
+</html>
