@@ -38,20 +38,10 @@
         <button type="submit">Save Changes</button>
     </form>
 </div>
-<button onclick="logout()">Logout</button>
+<button id="logoutButton" onclick="logout()">Logout</button>
 
+<script src="/IWT_ODISHA/logout.js"></script>
 
-
-<script>
-function logout() {
-    // Clear user data from local storage
-    localStorage.removeItem('userData'); // Adjust based on your storage method
-    sessionStorage.clear(); // Clear all session data if applicable
-
-    // Redirect to login page
-    window.location.href = 'login.html'; // Change this to your actual login page
-}
-</script>
 
 </body>
 </html>
