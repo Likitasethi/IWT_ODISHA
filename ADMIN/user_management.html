@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Dashboard</title>
+  <title>User Management</title>
   <link rel="stylesheet" href="adStyle.css">
 </head>
 <body>
-  <h1>Admin Dashboard</h1>
+  <h1>User Management</h1>
   <ul class="nav-links">
     <li><a href="ad_dashboard.html">Dashboard</a></li>
       <li><a href="package_management.html">Package Management</a></li>
@@ -15,11 +15,22 @@
       <li><a href="reviews.html">Reviews</a></li>
       <li><a href="profile.html">Profile</a></li>
   </ul>
-  <div class="dashboard-container">
-    <div class="stat-box">Total Users: 150</div>
-    <div class="stat-box">Total Bookings: 80</div>
-    <div class="stat-box">Revenue: 12,000 INR</div>
-    <div class="stat-box">Active Packages: 20</div>
-  </div>
+  <table>
+    <tr>
+      <th>User ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Role</th>
+      <th>Actions</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>John Doe</td>
+      <td>johndoe@example.com</td>
+      <td>User</td>
+      <td><button>Edit</button> <button>Delete</button></td>
+    </tr>
+    
+  </table>
 </body>
 </html>

@@ -14,9 +14,12 @@ function logout() {
         }
     })
     .catch(error => console.error("Error logging out on the server:", error));
+  
+
 
     // Step 3: Redirect to login page or home page
     window.location.href = "/IWT_ODISHA/login.html"; // Redirect user to the login page
+    alert("You have been logged out. Please log in again for access.");
 }
 
 // Add this to your logout button in HTML
