@@ -75,506 +75,352 @@ button:hover {
     filter: blur(5px);
 }
 
-.hero-section{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color:#f0f8ff;
-    padding:20px;
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 15px 50px;
-    
-    border-radius: 5px;
-}
-.logo img{
-    width: 100px;
-} 
-.nav-links{
-    display: flex;
-    list-style: none;
-}
-
-.nav-links li{
-    margin: 0 15px;
-}
-
-.nav-links a{
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s;
-}
-
-.nav-links a:hover{
-   
-    border-bottom: 2px solid darkblue;
-    border-radius: 10px;
-    padding: 8px;
-}
-
-
-.search-box input{
-    padding: 10px;
-    border:1px solid;
-    width: 350px;
-    border-radius: 5px;
-}
-
-.search-box button {
-    padding: 10px;
-    border: none;
-    background-color: #d7e0ea;
-    color: white;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-left: 5px;
-}
-
-.hero-content{
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 80%;
-    margin-top: 10px;
-}
-.text{
-    max-width: 500px;
-    color: black;
-}
-
-.text h1{
-    font-size: 2.5rem;
-    margin-top: 10px;
-}
-
-.text p{
-    font-size: 1.2rem;
-    margin-top: 20px;
-
-}
-.explore-btn{
-    padding: 10px 20px;
-    border: none;
-    color: white;
-    border-radius: 5px;
-    background-color:  rgb(42, 101, 159);
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-.explore-btn:hover{
-    background-color: rgb(207, 204, 193);
-}
-.image img {
-    left: 50%;
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px; 
-}
- */
-
-*{
- margin: 0;
- padding: 0;
- box-sizing: border-box;
-
-}
-
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: black;
-    color: white;
+    background-color: #F6FCDF; /* Soft light green */
+    color: #1A1A19; /* Dark text for contrast */
     padding: 15px;
 }
 
-.nav-links{
+.nav-links {
     display: flex;
     list-style-type: none;
-
 }
 
-.nav-links li{
+.nav-links li {
     margin: 0 15px;
 }
 
-.nav-links a{
-    color: white;
+.nav-links a {
+    color: #1A1A19; /* Dark text */
     text-decoration: none;
 }
 
-.nav-links a:hover{
-    color: aqua;
+.nav-links a:hover {
+    color: #859F3D; /* Olive green on hover */
 }
 
-.search-box input{
+.search-box input {
     padding: 10px;
-    border:1px solid;
+    border: 1px solid #859F3D; /* Olive green border */
     width: 200px;
     border-radius: 5px;
 }
 
-#loginBtn{
-    background-color: peru;
-    color: black;
+#loginBtn {
+    background-color: #1A1A19; /* Dark background */
+    color: #F6FCDF; /* Light text */
     border: none;
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 #loginBtn:hover {
-    color: antiquewhite;
+    background-color: #859F3D; /* Olive green on hover */
 }
 
-.hero-content{
-    background-color: rgb(213, 148, 122);
-    height: 91vh;
+
+
+
+
+.explore-btn {
+    background-color: #859F3D; /* Olive green */
+    color: #F6FCDF; /* Light text for contrast */
+    border: none;
+    padding: 10px 20px; /* Add padding to the button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    font-size: 1em; /* Increase font size */
+    margin-top: 10px; /* Space between text and button */
+    transition: background-color 0.3s; /* Smooth transition for hover */
 }
 
-.text{
-    text-align: center;
+.explore-btn:hover {
+    background-color: #31511E; /* Darker green on hover */
 }
+
+
+.hero-content {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    height: 91vh; /* Full height of the viewport */
+    background-color: #F6FCDF; /* Soft light green */
+    position: relative; /* Position for the overlay effect */
+    padding: 20px; /* Add some padding */
+}
+
+.text {
+    z-index: 2; /* Make sure text appears above the background */
+    max-width: 600px; /* Limit the width of the text */
+    background: rgba(255, 255, 255, 0.9); /* White background with transparency for the box */
+    padding: 30px; /* More padding for a spacious feel */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Deeper shadow for more depth */
+    margin-right: 20px; /* Space between text box and image */
+}
+
+.image img {
+    max-width: 80%; /* Make image responsive and smaller than before */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px; /* Add rounded corners to image */
+    
+}
+
+
 
 
 
 
 
                                                     /* explore offers */
-.offer-section{
+.offer-section {
     height: auto;
+    padding: 20px; /* Add some padding for spacing */
 }
 
-.offer-section h2{
+.offer-section h2 {
     text-align: left;
-    color: #007BFF;
+    color: #31511E; /* Dark green for the heading */
+    font-size: 2em; /* Increase the font size for better visibility */
 }
 
-.offer-section p{
+.offer-section p {
     text-align: left;
-    color: #333;
+    color: #1A1A19; /* Dark gray for paragraphs */
+    font-size: 1.1em; /* Slightly larger font for better readability */
 }
 
 .featured-trip-ad {
-  display: flex;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  margin: 40px auto;
-  max-width: 1200px;
+    display: flex;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 40px auto;
+    max-width: 1200px;
+    background-color: #F6FCDF; /* Light pastel green background */
 }
 
 .trip-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .trip-details {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  max-width: 50%;
-  background-color: #f9f9f9;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 50%;
+    background-color: #859F3D; /* Soft green for the details section */
+    color: white; /* White text for contrast */
 }
 
 .trip-details h1 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-  color: #333;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #F6FCDF; /* Light pastel green for the title */
 }
 
 .trip-description {
-  font-size: 1.2em;
-  color: #555;
-  margin-bottom: 20px;
+    font-size: 1.2em;
+    color: #F6FCDF; /* Light pastel green for description text */
+    margin-bottom: 20px;
 }
 
 .trip-highlights {
-  list-style: none;
-  padding: 0;
-  font-size: 1.1em;
-  margin-bottom: 30px;
+    list-style: none;
+    padding: 0;
+    font-size: 1.1em;
+    margin-bottom: 30px;
 }
 
 .trip-highlights li {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
+    color: #F6FCDF; /* Light pastel green for highlight items */
 }
 
-.book-now-btn {
-  display: inline-block;
-
-  color: white;
-  padding: 15px 30px;
-  border-radius: 8px;
-  font-size: 1.2em;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
+.book-now{
+    display: inline-block;
+    background-color: #31511E; /* Dark green for button background */
+    color: white; /* White text */
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
-.book-now-btn:hover {
-  background-color: lightcyan;
-} 
+.book-now:hover {
+    background-color: #859F3D; /* Soft green on hover */
+}
+
 
 
                                             /* Destination style start */
-.destination-section{
-    text-align: center; 
-    padding: 20px;
- 
-}
-                                                
-h2{
-    margin-bottom: 20px; 
+.destination-section {
+    text-align: center;
+    padding: 40px 20px; /* Added extra padding for a spacious look */
+    background-color: #F6FCDF; /* Soft pastel green background */
+    border-radius: 15px; /* Rounded corners for the section */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
 }
 
-.destinations-container{
-    display:grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+h2 {
+    margin-bottom: 30px; /* Increased space below the heading */
+    color: #31511E; /* Dark green for the section title */
+    font-size: 2.5em; /* Larger font for emphasis */
 }
-                                                
+
+.destinations-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between grid items */
+    max-width: 1200px; /* Limit width for better layout */
+    margin: 0 auto; /* Center the grid */
+}
+
 .destination {
-    display: flex; 
+    display: flex;
+    flex-direction: column; /* Stack image and details */
     margin: 20px 0;
-    max-width: 700px;
-    background-color: white;
+    background-color: #FFFFFF; /* White background for cards */
     border: 1px solid rgb(221, 221, 221); 
-    border-radius: 8px; 
+    border-radius: 12px; /* Softer rounded corners */
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
 }
-                                                
+
+.destination:hover {
+    transform: scale(1.02); /* Slight scale effect on hover */
+}
+
 .image-container {
-    flex: 1.8; 
+    flex: 1; /* Adjust to take full width of the card */
+    position: relative; /* For possible overlay effects */
 }
-                                                
+
 .image-container img {
-    max-width: 100%; 
-    height: 100%;
-    width: 100%;
- }
-                                                
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-bottom: 4px solid #31511E; /* Decorative border below the image */
+}
+
 .details {
-    flex: 2; 
+    flex: 1;
     padding: 20px;
-    text-align: left
+    text-align: left;
+    background-color: #F6FCDF; /* Matching background color for the details */
+    border-radius: 0 0 12px 12px; /* Rounded corners at the bottom */
 }
-                                                
+
 h3 {
-    margin: 10px 0; 
+    margin: 10px 0;
+    color: #31511E; /* Dark green for subheadings */
 }
-                                                
+
 .price {
     font-weight: bold;
-    color: rgb(231, 76, 60); 
+    color: #E74C3C; /* Red color for prices */
+    font-size: 1.3em; /* Larger font for price emphasis */
 }
 
 .ratings {
     margin: 5px 0;
+    color: #555; /* Darker color for ratings */
 }
-                                                
+
 .book-now {
-    background-color: rgb(52, 152, 219); 
-    color: white; 
-    border: none; 
-    padding: 10px 15px; 
-    cursor: pointer; 
-     border-radius: 5px;
- }
+    background-color: #31511E; /* Dark green for button */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.1em; /* Slightly larger font for buttons */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition effects */
+}
+
 .book-now:hover {
-background-color: rgb(41, 128, 185);
- }
-      
+    background-color: #859F3D; /* Soft green on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
 
 
 
                             /* -----------------SERVICES SECTION-------------- */
 
 .services-section {
-    background-color: white;
-
+    background-color: #F6FCDF; /* Soft pastel green background */
+    padding: 40px 20px; /* Increased padding for a spacious look */
 }
 
 .services-section h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    text-align: left;
-    color: lightcoral;
+    text-align: center; /* Centered heading */
+    color: #31511E; /* Darker green for contrast */
 }
-.services-section p{
-    
+
+.services-section p {
     margin-bottom: 20px;
-  
-    text-align: left;
-    color: black;
+    text-align: center; /* Centered paragraph */
+    color: #1A1A19; /* Dark color for text */
+    font-size: 1.1em; /* Slightly larger font size */
 }
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 30px; /* Increased gap for better spacing */
     padding: 20px;
 }
 
 .service-item {
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    padding: 20px;
+    background-color: #FFFFFF; /* White background for cards */
+    border-radius: 15px; /* Rounded corners */
+    padding: 30px; /* Increased padding */
     text-align: center;
-    transition: transform 0.3s ease;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
 .service-item:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px); /* Subtle lift on hover */
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
 }
 
 .service-item i {
-    font-size: 2.5em;
-    color: lightblue;
+    font-size: 3em; /* Larger icon size for emphasis */
+    color: #859F3D; /* Soft green color for icons */
     margin-bottom: 15px;
 }
 
 .service-item h3 {
-    font-size: 1.2em;
+    font-size: 1.5em; /* Larger font for service titles */
     margin-bottom: 10px;
+    color: #31511E; /* Darker green for titles */
 }
 
 .service-item p {
-    font-size: 0.9em;
-    color: #666;
+    font-size: 1em; /* Normal font size */
+    color: #1A1A19; /* Dark gray for text */
 }
 
-
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    max-width: 1200px;
-  }
-  .card {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    overflow: hidden;
-    width: calc(24% - 20px); /* Adjusted width for four cards in a row */
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-  }
-  .card img {
-    width: 100%;
-    height: 200px; /* Increased height for a better visual */
-    object-fit: cover;
-  }
-  .card-content {
-    padding: 15px;
-  }
-  .card-title {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #333;
-  }
-  .card-info {
-    font-size: 14px;
-    color: #777;
-    margin-bottom: 8px;
-  }
-  .price {
-    color: #007bff;
-    font-weight: bold;
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-  .more-details {
-    display: inline-block;
-    font-size: 14px;
-    color: #007bff;
-    cursor: pointer;
-    margin-bottom: 10px;
-  }
-  .expanded-content {
-    display: none;
-    padding: 15px;
-    border-top: 1px solid #e0e0e0;
-    background-color: #f9f9f9;
-  }
-  .expanded-content p {
-    margin-bottom: 8px;
-  }
-  .book-button {
-    display: inline-block;
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: bold;
-    margin-top: 10px;
-    text-align: center;
-  }
-
-
-
-
-                                                /* Testimonial seciton */
-
-.testimonials-section {
-    padding: 40px;
-    text-align: center;
-  }
-  
-  .testimonials-section h2 {
-    font-size: 2.5em;
-    color: #333;
-    margin-bottom: 30px;
-  }
-  
-  .testimonial-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  
-  .testimonial-box {
-    background-color: #fff;
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    transition: transform 0.3s ease;
-  }
-  
-  .testimonial-box p {
-    font-size: 1em;
-    color: #555;
-    margin-bottom: 15px;
-  }
-  
-  .testimonial-box h4 {
-    font-size: 1.2em;
-    color: #333;
-  }
-  
-  .testimonial-box:hover {
-    transform: scale(1.05);
-  }
 
                                                     /* FOOTER STYLE */
 

@@ -4,7 +4,100 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Odisha Travel Packages</title>
-<link rel="stylesheet" href="hero.css">
+<style>
+  body {
+  background-color: #F6FCDF; /* Light background */
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.navbar {
+  background-color: #31511E; /* Dark green */
+  color: #FFDDAE; /* Light color for text */
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #FFDDAE; /* Light color for links */
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.card {
+  background-color: #FBFBFB; /* Light grey for card */
+  border: 1px solid #859F3D; /* Medium green border */
+  border-radius: 10px;
+  width: 300px;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-title {
+  color: #31511E; /* Dark green for title */
+}
+
+.price {
+  font-weight: bold;
+  color: #859F3D; /* Medium green for price */
+}
+
+.more-details {
+  color: #31511E; /* Dark green for 'More Details' */
+  cursor: pointer;
+}
+
+.expanded-content {
+  display: none; /* Initially hidden */
+  padding: 15px;
+  background-color: #C6E7FF; /* Light blue for expanded details */
+  border-top: 1px solid #859F3D; /* Medium green border */
+}
+
+.book-button {
+  background-color: #859F3D; /* Medium green for button */
+  color: #FBFBFB; /* Light grey text */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.book-button:hover {
+  background-color: #31511E; /* Darker green on hover */
+}
+
+</style>
 </head>
 <body>
     <nav class="navbar">
@@ -15,9 +108,7 @@
             <li><a href="my_bookings.html">Bookings</a></li>
             <li><a href="profile.html">Profile</a></li>
         </ul>
-        <div class="search-box">
-            <input type="text" placeholder="🔍Search...">
-        </div>
+
        
     </nav>
 <div class="card-container">
@@ -39,7 +130,7 @@
 
   <!-- Card 2 -->
   <div class="card">
-    <img src="Assets/bhubaneshwar.cms" alt="Puri Beach">
+    <img src="/IWT_ODISHA/Assets/jagganath temple.jpg" alt="Puri Beach">
     <div class="card-content">
       <h3 class="card-title">Puri District Temple and Beach Retreat</h3>
       <p class="card-info">Puri District | 3 Days / 2 Nights</p>
@@ -54,7 +145,7 @@
   </div>
 
   <div class="card">
-    <img src="Assets/bhubaneshwar.cms" alt="Puri Beach">
+    <img src="/IWT_ODISHA/Assets/bhubaneshwar.cms" alt="Puri Beach">
     <div class="card-content">
       <h3 class="card-title">Sundargarh Tribal and Nature Expedition</h3>
       <p class="card-info">Sundargarh District | 4 Days / 3 Nights</p>
@@ -82,11 +173,10 @@
       <a class="book-button" href="#book">Book Now</a>
     </div>
   </div>
-
  
-
-  
 </div>
+
+
 
 <script>
   function toggleDetails(element) {

@@ -5,18 +5,17 @@
     <title>Get Started</title>
     <style>
         * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body, html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, html {
     height: 100%;
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
+    color: #31511E; /* Dark green for text */
     overflow: hidden;
     text-align: center;
 }
@@ -37,7 +36,7 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); 
+    background: rgba(246, 252, 223, 0.4); /* Light greenish overlay */
     z-index: 1;
 }
 
@@ -47,96 +46,50 @@ body, html {
     text-align: center;
     padding: 20px;
     margin-top: 300px;
+    color: #31511E; /* Dark green for content text */
 }
-
-
 
 p {
     font-size: 1.5em;
     margin-bottom: 40px;
+    color: #1A1A19; /* Darker text for paragraph */
 }
 
 .cta-button {
     padding: 15px 30px;
-    background-color: #4CAF50;
+    background-color: #859F3D; /* Medium green */
     color: white;
     border: none;
     border-radius: 20px;
     font-size: 1.5em;
     text-decoration: none;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: #45a049;
+    background-color: #31511E; /* Dark green on hover */
+}
+
+#background-video {
+    min-width: auto;
+    min-height: 100%;
+    width: 100%;
 }
 
 
-@media (max-width: 1024px) {
-    h1 {
-        font-size: 2.5em;
-    }
-    
-    p {
-        font-size: 1.3em;
-    }
-
-    .cta-button {
-        font-size: 1.2em;
-        padding: 12px 25px;
-    }
-}
-
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2em;
-    }
-    
-    p {
-        font-size: 1.2em;
-    }
-
-    .cta-button {
-        font-size: 1.1em;
-        padding: 10px 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.5em;
-    }
-    
-    p {
-        font-size: 1em;
-    }
-
-    .cta-button {
-        font-size: 1em;
-        padding: 8px 15px;
-    }
-
-    #background-video {
-        min-width: auto;
-        min-height: 100%;
-        width: 100%;
-    }
-}
     </style>
 </head>
 <body>
     <div class="video-overlay">
         <div class="content">
-            
-            <p>Customize your itinerary, choose your favorite destinations, and start exploring today!
-            </p>
-            <a href="hero.html" class="cta-button">Start Planning</a>
-         </div>
+            <p>Customize your itinerary, choose your favorite destinations, and start exploring today!</p>
+            <a href="/IWT_ODISHA/register.html" class="cta-button">Start Planning</a>
+        </div>
+    </div>
 
     <video autoplay muted loop id="background-video">
-        <source src="Assets/seawave video.mp4 " type="video/mp4">
-        
+        <source src="/IWT_ODISHA/Assets/seawave video.mp4" type="video/mp4">
     </video>
-    </div>
 </body>
 </html>

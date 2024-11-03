@@ -4,8 +4,135 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Register</title>
-  <link rel="stylesheet" href="register.css">
+ <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body, html {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f7f7f7; 
+}
+
+
+.container {
+  display: flex;
+  width: 80%;
+  max-width: 900px;
+  background-color: white;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.left-panel, .right-panel {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+
+.left-panel {
+  background-color: #D4F6FF; 
+  color: #31511E;
+}
+
+.left-panel h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.left-panel p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.learn-more {
+  padding: 10px 20px;
+  background-color: #859F3D; 
+  color: white;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more:hover {
+  background-color: #31511E; 
+}
+
+
+.right-panel {
+  background-color: #ffffff; 
+}
+
+.form-title {
+  font-size: 1.8em;
+  color: #1A1A19; 
+  margin-bottom: 20px;
+}
+
+
+.form-group {
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9em;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.continue-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #859F3D; 
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.continue-btn:hover {
+  background-color: #31511E; 
+}
+
+/* Divider */
+.divider {
+  margin-top: 20px;
+  color: #999;
+  font-size: 0.9em;
+}
+
+
+ </style>
 </head>
+
 <body>
 
 
@@ -27,7 +154,7 @@
         <input type="password" id="newPassword" required>
       </div>
       <button type="button" class="continue-btn" onclick="register()">Register</button>
-      <div class="divider">or</div>
+    
     </form>
   </div>
 </div>
