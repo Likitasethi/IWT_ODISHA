@@ -5,6 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Bookings</title>
     <link rel="stylesheet" href="hero.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F6FCDF;
+            margin: 0;
+        }
+        .navbar {
+            background-color:#F6FCDF ; 
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          
+        }
+
+        .navbar h1 {
+            font-size: 2rem;
+            color: #31511E; 
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px; 
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: #1A1A19;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-links li a:hover {
+            color: rgb(221, 54, 35); 
+        }
+
+        .my-bookings-section {
+            padding: 20px;
+            text-align: center;
+        }
+        .booking-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .booking-card {
+            background-color: #FBFBFB;
+            border: 1px solid #859F3D;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 500px;
+            margin: 10px 0;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .booking-title {
+            font-size: 1.2em;
+            color: #31511E;
+        }
+        .booking-details {
+            margin: 5px 0;
+        }
+        .cancel-button {
+            background-color: #D9534F;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .cancel-button:hover {
+            background-color: #C9302C;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -17,13 +94,49 @@
         </ul>   
     </nav>
 
-<section class="my-bookings-section">
-    <h2>My Bookings</h2>
-    <div class="booking-container" id="bookingContainer">
-        
-    </div>
-</section>
+    <section class="my-bookings-section">
+        <h2>My Bookings</h2>
+        <div class="booking-container" id="bookingContainer">
+            <!-- Example Booking Card -->
+            <div class="booking-card">
+                <h3 class="booking-title">Bhubaneswar Heritage Explorer</h3>
+                <p class="booking-details">Date: December 1, 2024</p>
+                <p class="booking-details">Status: Confirmed</p>
+                <button class="cancel-button" onclick="cancelBooking()">Cancel Booking</button>
+            </div>
+            <div class="booking-card">
+                <h3 class="booking-title">Puri District Temple and Beach Retreat</h3>
+                <p class="booking-details">Date: December 5, 2024</p>
+                <p class="booking-details">Status: Pending</p>
+                <button class="cancel-button" onclick="cancelBooking()">Cancel Booking</button>
+            </div>
+            <!-- Add more booking cards dynamically here -->
+        </div>
+    </section>
 
+    <script>
+        function cancelBooking() {
+            // Placeholder for cancel booking logic
+            alert("Booking cancelled successfully!");
+            // Here, you would add code to remove the booking from the backend and refresh the UI.
+        }
 
+        // Example of how to dynamically add booking cards
+        function addBooking(title, date, status) {
+            const bookingContainer = document.getElementById('bookingContainer');
+            const bookingCard = document.createElement('div');
+            bookingCard.classList.add('booking-card');
+            bookingCard.innerHTML = `
+                <h3 class="booking-title">${title}</h3>
+                <p class="booking-details">Date: ${date}</p>
+                <p class="booking-details">Status: ${status}</p>
+                <button class="cancel-button" onclick="cancelBooking()">Cancel Booking</button>
+            `;
+            bookingContainer.appendChild(bookingCard);
+        }
+
+        // Example usage
+        // addBooking("Chilika Lake Adventure", "December 10, 2024", "Confirmed");
+    </script>
 </body>
 </html>

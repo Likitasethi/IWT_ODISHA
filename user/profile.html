@@ -5,9 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Management</title>
     <link rel="stylesheet" href="hero.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F6FCDF; 
+            color: #1A1A19; 
+            margin: 0;
+            padding: 0;
+        }
 
+        .navbar {
+            background-color:#F6FCDF ; 
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          
+        }
+
+        .navbar h1 {
+            font-size: 2rem;
+            color: #31511E; 
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px; 
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: #1A1A19;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-links li a:hover {
+            color: rgb(221, 54, 35); 
+        }
+
+        .log {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+            max-width: 400px; 
+            width: 100%; 
+        }
+
+        h2 {
+            text-align: center;
+            color: #31511E; 
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input[type="file"],
+        input[type="text"],
+        input[type="email"],
+        button {
+            width: 100%; 
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px; 
+        }
+
+        button {
+            background-color: rgb(231, 76, 60); 
+            color: white;
+            border: none;
+            cursor: pointer; 
+            transition: background-color 0.3s, transform 0.2s; 
+        }
+
+        button:hover {
+            background-color: rgb(192, 57, 43); 
+            transform: translateY(-1px); 
+        }
+
+        .logout-button {
+            background-color: transparent; 
+            color: rgb(231, 76, 60); 
+            border: none; 
+            cursor: pointer; 
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .logout-button:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
+
 <nav class="navbar">
     <h1>Travel ODISHA</h1>
     <ul class="nav-links">
@@ -17,29 +121,26 @@
         <li><a href="profile.html">Profile</a></li>
     </ul>
 </nav>
+
 <div class="log">
-<div class="container">
-    <h2>Update Your Profile</h2>
-    <form>
-        <label for="profile-picture">Change Profile Picture:</label>
-        <input type="file" id="profile-picture" name="profile-picture"><br>
-        
-        <label for="username">Name:</label>
-        <input type="text" id="username" name="username" ><br>
+    <div class="container">
+        <h2>Update Your Profile</h2>
+        <form>
+            <label for="profile-picture">Change Profile Picture:</label>
+            <input type="file" id="profile-picture" name="profile-picture">
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" ><br>
+            <label for="username">Name:</label>
+            <input type="text" id="username" name="username">
 
-        <button type="submit">Save Changes</button>
-    </form>
-    <button class="logout-button" onclick="logout()">Logout</button>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+
+            <button type="submit">Save Changes</button>
+        </form>
+        <button class="logout-button" onclick="logout()">Logout</button>
+    </div>
 </div>
-</div>
-
-
 
 <script src="/IWT_ODISHA/logout.js"></script>
-
-
 </body>
 </html>

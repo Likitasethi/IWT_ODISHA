@@ -1,189 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Odisha Travel Packages</title>
-<style>
-  body {
-  background-color: #F6FCDF; /* Light background */
-  font-family: Arial, sans-serif;
-  margin: 0;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odisha Travel Packages</title>
+    <style>
+        body {
+            background-color: #F6FCDF; 
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .navbar {
+            background-color:#F6FCDF ; 
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          
+        }
 
-.navbar {
-  background-color: #31511E; /* Dark green */
-  color: #FFDDAE; /* Light color for text */
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+        .navbar h1 {
+            font-size: 2rem;
+            color: #31511E; 
+        }
 
-.nav-links {
-  list-style-type: none;
-  display: flex;
-  gap: 20px;
-}
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px; 
+        }
 
-.nav-links a {
-  text-decoration: none;
-  color: #FFDDAE; /* Light color for links */
-}
+        .nav-links li a {
+            text-decoration: none;
+            color: #1A1A19;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
 
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 20px;
-}
+        .nav-links li a:hover {
+            color: rgb(221, 54, 35); 
+        }
 
-.card {
-  background-color: #FBFBFB; /* Light grey for card */
-  border: 1px solid #859F3D; /* Medium green border */
-  border-radius: 10px;
-  width: 300px;
-  margin: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s;
-}
+        .card-container {
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            padding: 20px;
+        }
 
-.card:hover {
-  transform: scale(1.05);
-}
+        .card {
+            background: linear-gradient(145deg, #FFFFFF, #E6E6E6); 
+            border-radius: 12px;
+            width: 80%; 
+            margin: 15px 0; 
+            box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.2), -8px -8px 12px rgba(255, 255, 255, 0.7); 
+            transition: transform 0.3s, box-shadow 0.3s;
+            overflow: hidden; 
+        }
 
-.card img {
-  width: 100%;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+        }
 
-.card-content {
-  padding: 15px;
-}
+        .card img {
+            width: 100%;
+            height: 200px; 
+            object-fit: cover; 
+            border-top-left-radius: 12px; 
+            border-top-right-radius: 12px; 
+        }
 
-.card-title {
-  color: #31511E; /* Dark green for title */
-}
+        .card-content {
+            padding: 15px;
+        }
 
-.price {
-  font-weight: bold;
-  color: #859F3D; /* Medium green for price */
-}
+        .card-title {
+            color: #31511E; 
+            font-size: 1.6em; 
+            margin: 0;
+        }
 
-.more-details {
-  color: #31511E; /* Dark green for 'More Details' */
-  cursor: pointer;
-}
+        .price {
+            font-weight: bold;
+            color: #859F3D; 
+            font-size: 1.2em; 
+        }
 
-.expanded-content {
-  display: none; /* Initially hidden */
-  padding: 15px;
-  background-color: #C6E7FF; /* Light blue for expanded details */
-  border-top: 1px solid #859F3D; /* Medium green border */
-}
+        .more-details {
+            color: #31511E;
+            cursor: pointer;
+            text-decoration: underline; 
+            margin-top: 10px;
+            display: inline-block; 
+        }
 
-.book-button {
-  background-color: #859F3D; /* Medium green for button */
-  color: #FBFBFB; /* Light grey text */
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-}
+        .expanded-content {
+            display: none;
+            padding: 15px;
+            background-color: #C6E7FF; 
+            border-top: 2px solid #859F3D; 
+        }
 
-.book-button:hover {
-  background-color: #31511E; /* Darker green on hover */
-}
+        .book-button {
+            background-color: #859F3D; 
+            color: #FBFBFB; 
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            display: inline-block; 
+            margin-top: 10px; 
+        }
 
-</style>
+        .book-button:hover {
+            background-color: #31511E; 
+        }
+
+    </style>
 </head>
 <body>
     <nav class="navbar">
-      <h1>Travel ODISHA</h1>
+        <h1>Travel ODISHA</h1>
         <ul class="nav-links">
             <li><a href="hero.html">Home</a></li>
             <li><a href="packages.html">Packages</a></li>
             <li><a href="my_bookings.html">Bookings</a></li>
             <li><a href="profile.html">Profile</a></li>
         </ul>
-
-       
     </nav>
-<div class="card-container">
-  <!-- Card 1 -->
-  <div class="card">
-    <img src="Assets/bhubaneshwar.cms" alt="Bhubaneswar Heritage">
-    <div class="card-content">
-      <h3 class="card-title">Bhubaneswar Heritage Explorer</h3>
-      <p class="card-info">Khordha District | 2 Days / 1 Night</p>
-      <p class="price">Starting at ₹3,999/person</p>
-      <span class="more-details" onclick="toggleDetails(this)">More Details</span>
-    </div>
-    <div class="expanded-content">
-      <p><strong>Itinerary:</strong> Visit Lingaraj Temple, Mukteshwar Temple, Dhauli Peace Pagoda, Nandankanan Zoo.</p>
-      <p><strong>Inclusions:</strong> Stay, breakfast, entry tickets, guide.</p>
-      <a class="book-button" href="#book">Book Now</a>
-    </div>
-  </div>
+    <div class="card-container">
+        <!-- Card 1 -->
+        <div class="card">
+            <img src="Assets/bhubaneshwar.cms" alt="Bhubaneswar Heritage">
+            <div class="card-content">
+                <h3 class="card-title">Bhubaneswar Heritage Explorer</h3>
+                <p class="card-info">Khordha District | 2 Days / 1 Night</p>
+                <p class="price">Starting at ₹3,999/person</p>
+                <span class="more-details" onclick="toggleDetails(this)">More Details</span>
+            </div>
+            <div class="expanded-content">
+                <p><strong>Itinerary:</strong> Visit Lingaraj Temple, Mukteshwar Temple, Dhauli Peace Pagoda, Nandankanan Zoo.</p>
+                <p><strong>Inclusions:</strong> Stay, breakfast, entry tickets, guide.</p>
+                <a class="book-button" href="#book">Book Now</a>
+            </div>
+        </div>
 
-  <!-- Card 2 -->
-  <div class="card">
-    <img src="/IWT_ODISHA/Assets/jagganath temple.jpg" alt="Puri Beach">
-    <div class="card-content">
-      <h3 class="card-title">Puri District Temple and Beach Retreat</h3>
-      <p class="card-info">Puri District | 3 Days / 2 Nights</p>
-      <p class="price">Starting at ₹5,999/person</p>
-      <span class="more-details" onclick="toggleDetails(this)">More Details</span>
-    </div>
-    <div class="expanded-content">
-      <p><strong>Itinerary:</strong> Jagannath Temple, Raghurajpur Heritage Village, Konark Sun Temple, Puri Beach.</p>
-      <p><strong>Inclusions:</strong> Stay, breakfast, local transport, guide services.</p>
-      <a class="book-button" href="#book">Book Now</a>
-    </div>
-  </div>
+        <!-- Card 2 -->
+        <div class="card">
+            <img src="/IWT_ODISHA/Assets/jagganath temple.jpg" alt="Puri Beach">
+            <div class="card-content">
+                <h3 class="card-title">Puri District Temple and Beach Retreat</h3>
+                <p class="card-info">Puri District | 3 Days / 2 Nights</p>
+                <p class="price">Starting at ₹5,999/person</p>
+                <span class="more-details" onclick="toggleDetails(this)">More Details</span>
+            </div>
+            <div class="expanded-content">
+                <p><strong>Itinerary:</strong> Jagannath Temple, Raghurajpur Heritage Village, Konark Sun Temple, Puri Beach.</p>
+                <p><strong>Inclusions:</strong> Stay, breakfast, local transport, guide services.</p>
+                <a class="book-button" href="#book">Book Now</a>
+            </div>
+        </div>
 
-  <div class="card">
-    <img src="/IWT_ODISHA/Assets/bhubaneshwar.cms" alt="Puri Beach">
-    <div class="card-content">
-      <h3 class="card-title">Sundargarh Tribal and Nature Expedition</h3>
-      <p class="card-info">Sundargarh District | 4 Days / 3 Nights</p>
-      <p class="price">Starting at ₹7,499/person</p>
-      <span class="more-details" onclick="toggleDetails(this)">More Details</span>
+        <!-- Card 3 -->
+        <div class="card">
+            <img src="/IWT_ODISHA/Assets/sundargarh.jpg" alt="Sundargarh">
+            <div class="card-content">
+                <h3 class="card-title">Sundargarh Tribal and Nature Expedition</h3>
+                <p class="card-info">Sundargarh District | 4 Days / 3 Nights</p>
+                <p class="price">Starting at ₹7,499/person</p>
+                <span class="more-details" onclick="toggleDetails(this)">More Details</span>
+            </div>
+            <div class="expanded-content">
+                <p><strong>Itinerary:</strong> Khandadhar Waterfall, Vedvyas Temple, Bonai Eco-Village tour.</p>
+                <p><strong>Inclusions:</strong> Eco-lodge stay, guided tours, local performances, breakfast.</p>
+                <a class="book-button" href="#book">Book Now</a>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card">
+            <img src="/IWT_ODISHA/Assets/rayagada.jpg" alt="Rayagada">
+            <div class="card-content">
+                <h3 class="card-title">Rayagada Hill Station and Tribal Immersion</h3>
+                <p class="card-info">Rayagada District | 4 Days / 3 Nights</p>
+                <p class="price">Starting at ₹8,999/person</p>
+                <span class="more-details" onclick="toggleDetails(this)">More Details</span>
+            </div>
+            <div class="expanded-content">
+                <p><strong>Itinerary:</strong> Minajhola, Chatikona, Desia Tribal Village tour, Hatipathar waterfall.</p>
+                <p><strong>Inclusions:</strong> Eco-stay, breakfast, tribal village guide, transport.</p>
+                <a class="book-button" href="#book">Book Now</a>
+            </div>
+        </div>
     </div>
-    <div class="expanded-content">
-      <p><strong>Itinerary:</strong>Khandadhar Waterfall,  Vedvyas Temple and Koili Ghughar waterfall, Bonai Eco-Village tour</p>
-      <p><strong>Inclusions:</strong> Eco-lodge stay, guided tours, local performances, breakfast.</p>
-      <a class="book-button" href="#book">Book Now</a>
-    </div>
-  </div>
 
-  <div class="card">
-    <img src="Assets/bhubaneshwar.cms" alt="Puri Beach">
-    <div class="card-content">
-      <h3 class="card-title">Rayagada Hill Station and Tribal Immersion</h3>
-      <p class="card-info"> Rayagada District | 4 Days / 3 Nights</p>
-      <p class="price">Starting at ₹8,999/person</p>
-      <span class="more-details" onclick="toggleDetails(this)">More Details</span>
-    </div>
-    <div class="expanded-content">
-      <p><strong>Itinerary:</strong> Minajhola, Chatikona, Desia Tribal Village tour,  Hatipathar waterfall</p>
-      <p><strong>Inclusions:</strong> Eco-stay, breakfast, tribal village guide, transport.</p>
-      <a class="book-button" href="#book">Book Now</a>
-    </div>
-  </div>
- 
-</div>
-
-
-
-<script>
-  function toggleDetails(element) {
-    const expandedContent = element.parentElement.nextElementSibling;
-    expandedContent.style.display = expandedContent.style.display === 'block' ? 'none' : 'block';
-  }
-</script>
-
+    <script>
+        function toggleDetails(element) {
+            const expandedContent = element.parentElement.nextElementSibling;
+            expandedContent.style.display = expandedContent.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
 </body>
 </html>

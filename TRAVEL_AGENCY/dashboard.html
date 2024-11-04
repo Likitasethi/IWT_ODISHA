@@ -13,12 +13,12 @@
         
         body {
             font-family: Arial, sans-serif;
-            background-color: lightgray;
-            color: black;
+            background-color: #F6FCDF; /* Light background color */
+            color: #1A1A19; /* Text color */
         }
         
         header {
-            background-color: white; 
+            background-color: #FBFBFB; 
             padding: 20px;
             text-align: center;
             border-bottom: 2px solid rgb(224, 224, 224); 
@@ -27,28 +27,30 @@
         
         h1 {
             font-size: 2.5rem;
-            color: rgb(44, 62, 80); 
+            color: #31511E; /* Heading color */
         }
         
         nav {
             display: flex;
             justify-content: center;
-            background: white;
+            background: #C6E7FF; /* Navbar background color */
             padding: 15px 0;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
             margin-bottom: 20px;
+            border-radius: 5px; /* Rounded corners */
         }
         
         nav a {
-            margin: 0 15px;
+            margin: 0 20px;
             text-decoration: none;
-            color: rgb(46, 99, 152); 
+            color: #1A1A19; /* Link color */
             font-weight: bold;
-            transition: color 0.3s;
+            transition: color 0.3s, transform 0.3s; /* Smooth transition */
         }
         
         nav a:hover {
-            color: rgb(221, 54, 35); 
+            color: #D43F3A; /* Hover color */
+            transform: scale(1.05); /* Slight scaling effect */
         }
         
         .container {
@@ -61,7 +63,7 @@
         }
         
         h2 {
-            color: rgb(44, 62, 80);
+            color: #31511E; /* Subheading color */
             text-align: center;
             margin-bottom: 20px;
             font-size: 2rem;
@@ -70,22 +72,20 @@
         p {
             text-align: center;
             font-size: 1.2rem;
-            color: rgb(50, 50, 50);
+            color: #333; /* Darker text color for better contrast */
         }
     </style>
-
 </head>
 
 <body>
-<header>
-    <h1>Travel Agency Dashboard</h1>
-</header>
+    <header>
+    <h1>Travel Agency</h1>
+    </header>
 
 <nav>
     <a href="dashboard.html">Dashboard</a>
     <a href="manage-packages.html">Manage Packages</a>
     <a href="profile-management.html">Profile Management</a>
-   
 </nav>
 
 <div class="container">
