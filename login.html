@@ -1,165 +1,161 @@
 <!DOCTYPE html>
- <html lang="en">
- <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Login</title>
-   <style>
-.form_main {
-  width: 300px;
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(255, 255, 255); 
-  padding: 40px; 
-  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.062);
-  position: relative;
-  overflow: hidden;
-  margin: auto;
-  top: 50vh;
-  transform: translateY(-50%);
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+   
+    <style>
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-.form_main::before {
-  position: absolute;
-  content: "";
-  width: 300px;
-  height: 300px;
-  background-color: #D4F6FF;
-  transform: rotate(45deg);
-  left: -180px;
-  bottom: 30px;
-  z-index: 1;
-  border-radius: 30px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.082);
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
 }
 
-.heading {
-  font-size: 2em;
-  color: #1A1A19; 
-  font-weight: 700;
-  margin: 5px 0 10px 0;
-  z-index: 2;
+.login-container {
+    background-color: wheat;
+    display: flex;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    margin: 20px;
 }
 
-.inputContainer {
-  width: 100%;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
+.form-section {
+    width: 100%;
 }
 
-.inputIcon {
-  position: absolute;
-  left: 3px;
+h1 {
+    color: #333;
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
-.inputField {
-  width: 100%;
-  height: 35px;
-  background-color: transparent;
-  border: none;
-  border-bottom: 2px solid rgb(173, 173, 173);
-  margin: 15px 0;
-  color: #1A1A19;
-  font-size: 1em; 
-  font-weight: 500;
-  box-sizing: border-box;
-  padding-left: 30px;
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
 }
 
-.inputField:focus {
-  outline: none;
-  border-bottom: 2px solid #859F3D; 
+.form-group i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
 }
 
-.inputField::placeholder {
-  color: rgb(80, 80, 80);
-  font-size: 1em;
-  font-weight: 500;
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 15px 12px 40px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s;
 }
 
-#button {
-  z-index: 2;
-  position: relative;
-  width: 100%;
-  border: none;
-  background-color: #859F3D; 
-  height: 35px; 
-  color: white;
-  font-size: .9em;
-  font-weight: 500;
-  letter-spacing: 1px;
-  margin: 10px;
-  cursor: pointer;
+input:focus {
+    outline: none;
+    border-color: rgb(66, 133, 244);
 }
 
-#button:hover {
-  background-color: #31511E; 
+.login-btn {
+    background-color: rgb(66, 133, 244);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    margin-top: 10px;
 }
 
-.forgotLink {
-  z-index: 2;
-  font-size: .8em;
-  font-weight: 500;
-  color: #31511E; 
-  text-decoration: none;
-  padding: 8px 15px;
-  border-radius: 20px;
+.login-btn:hover {
+    background-color: rgb(51, 103, 214);
 }
 
-   </style>
- </head>
- <body>
-   <div class="container">
-     <form action="" class="form_main">
-       <p class="heading">Welcome Back!!!</p>
-       <div class="inputContainer">
-       <input type="text" class="inputField" id="username" placeholder="Username">
-       </div>
-       
-       <div class="inputContainer">
-         <input type="password" class="inputField" id="password" placeholder="Password">
-       </div>
-                 
-       <button type="button" id="button" onclick="login()">Submit</button>
-     </form>
-     
-   </div>
- </body>
- <script>
-   function login() {
-     const username = document.getElementById("username").value;
-     const password = document.getElementById("password").value;
- 
-     // Predefined admin and travel agency credentials
-     const adminUsername = "admin";
-     const adminPassword = "admin123";
-     const agencyUsername = "agency";
-     const agencyPassword = "agency123";
- 
-     // Retrieve user credentials from localStorage
-     const storedUsername = localStorage.getItem("user_username");
-     const storedPassword = localStorage.getItem("user_password");
- 
-     // Check if the input matches any predefined credentials
-     if (username === adminUsername && password === adminPassword) {
-       // Redirect to admin dashboard
-       window.location.href = "ADMIN/ad_dashboard.html";
-     } else if (username === agencyUsername && password === agencyPassword) {
-       // Redirect to agency dashboard
-       window.location.href = "TRAVEL_AGENCY/dashboard.html";
-     } else if (username === storedUsername && password === storedPassword) {
-       // Redirect to user dashboard
-       window.location.href = "USER/hero.html";
-     } else {
-       alert("Invalid credentials");
-     }
-   }
- </script>
- </html>
- 
+p {
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+}
+
+p a {
+    color: rgb(66, 133, 244);
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+    </style>
+</head>
+<body>
+  <div class="login-container">
+    <div class="form-section">
+        <h1>Login</h1>
+        <form id="loginForm">
+            <div class="form-group">
+                <i>✉️</i>
+                <input type="email" id="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <i>🔒</i>
+                <input type="password" id="password" placeholder="Password" required>
+            </div>
+            <button type="submit" class="login-btn">LOGIN</button>
+            <p>Don't have an account? <a href="register.html">Sign up here</a></p>
+        </form>
+    </div>
+</div>
+
+<script>
+    // JavaScript to manage login redirects based on roles
+    const predefinedUsers = [
+        { role: 'admin', email: 'admin@example.com', password: 'admin123' },
+        { role: 'agency', email: 'agency@example.com', password: 'agency123' }
+    ];
+
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        const travelerData = JSON.parse(localStorage.getItem('travelerData'));
+        const predefinedUser = predefinedUsers.find(user => user.email === email && user.password === password);
+
+        if (predefinedUser) {
+            alert(`Welcome, ${predefinedUser.role.toUpperCase()}!`);
+            if (predefinedUser.role === 'admin') {
+                window.location.href = "ADMIN/ad_dashboard.html";
+            } else {
+                window.location.href = "TRAVEL_AGENCY/dashboard.html";
+            }
+            return;
+        }
+
+        if (travelerData && travelerData.email === email && travelerData.password === password) {
+            alert(`Welcome, ${travelerData.name}!`);
+            window.location.href = "USER/hero.html";
+        } else {
+            alert('Invalid email or password. Please try again.');
+        }
+    });
+</script>
+</body>
+</html>
