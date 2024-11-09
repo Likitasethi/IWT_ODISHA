@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Beaches of Odisha</title>
+    <link rel="stylesheet" href="/user/hero.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .containerr {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1e88e5;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+        }
+
+        .beach-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .beach-card {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        /* First two beaches: Image on the left, text on the right (default) */
+        .beach-card:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .beach-image {
+            flex: 1;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .beach-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .beach-info {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .beach-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #1e88e5;
+            margin-bottom: 10px;
+        }
+
+        .beach-location {
+            font-size: 1rem;
+            color: #90caf9;
+            margin-bottom: 8px;
+        }
+
+        .beach-about {
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .buttons-container {
+            display: flex;
+            gap: 10px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .know-more-btn {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .know-more-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .book-now-btn {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .book-now-btn:hover {
+            background-color: #218838;
+        }
+
+        /* Styles for the last three beaches to have same layout as first two */
+        .beach-card-last {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .beach-card-last:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        @media (max-width: 1024px) {
+            .beach-card {
+                flex-direction: column;
+            }
+
+            .beach-card:nth-child(even) {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .beach-grid {
+                gap: 30px;
+            }
+
+            .beach-info {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .beach-card {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .beach-card:nth-child(even) {
+                flex-direction: column;
+            }
+
+            .beach-info {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Travel Odisha</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="hero.html">Home</a></li>
+                    <li><a href="packages.html">Top Packages</a></li>
+                    <li><a href="my_bookings.html">Booking</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="containerr">
+        <div class="filters">
+            <button class="filter-btn"><a href="home.html">All</a></button>
+            <button class="filter-btn"><a href="temples.html">Temples</a></button>
+            <button class="filter-btn active"><a href="beaches.html">Beaches</a></button>
+            <button class="filter-btn"><a href="wildlife.html">Wildlife</a></button>
+            <button class="filter-btn"><a href="heritage.html">Heritage</a></button>
+            <button class="filter-btn"><a href="nature.html">Nature</a></button>
+        </div>
+
+        <h1>Beautiful Beaches of Odisha</h1>
+        <div class="beach-grid">
+            <!-- Beach Card 1 -->
+            <div class="beach-card">
+                <div class="beach-image">
+                    <img src="https://www.hotelgoldentree.in/assets/img/slider/previousimg.jpg" alt="Puri Beach">
+                </div>
+                <div class="beach-info">
+                    <div class="beach-name">Puri Beach</div>
+                    <div class="beach-location">Puri</div>
+                    <div class="beach-about">Famous golden sand beach with religious significance. Perfect for watching sunrise and cultural activities.</div>
+                    <div class="buttons-container">
+                        <button class="button know-more-btn">Know More</button>
+                        <button class="button book-now-btn"><a href="/user/booknow.html">Book Now</a></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Beach Card 2 -->
+            <div class="beach-card">
+                <div class="beach-image">
+                    <img src="https://static2.tripoto.com/media/transfer/img/OgData/1562912796_story_chandipur_f_travel_amazing_india_647_100616041135.jpg" alt="Chandipur Beach">
+                </div>
+                <div class="beach-info">
+                    <div class="beach-name">Chandipur Beach</div>
+                    <div class="beach-location">Balasore</div>
+                    <div class="beach-about">Unique beach where the sea recedes up to 5 km during low tide. Known as the hide-and-seek beach.</div>
+                    <div class="buttons-container">
+                        <button class="button know-more-btn">Know More</button>
+                        <button class="button book-now-btn"><a href="/user/booknow.html">Book Now</a></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Beach Card 3 -->
+            <div class="beach-card-last">
+                <div class="beach-image">
+                    <img src="https://www.go2india.in/orissa/images/b-gopalpur-beach.JPG" alt="Gopalpur Beach">
+                </div>
+                <div class="beach-info">
+                    <div class="beach-name">Gopalpur Beach</div>
+                    <div class="beach-location">Ganjam</div>
+                    <div class="beach-about">Pristine beach with colonial charm. Perfect for water sports and watching fishing boats.</div>
+                    <div class="buttons-container">
+                        <button class="button know-more-btn">Know More</button>
+                        <button class="button book-now-btn"><a href="/user/booknow.html">Book Now</a></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Beach Card 4 -->
+            <div class="beach-card-last">
+                <div class="beach-image">
+                    <img src="https://cdn.audleytravel.com/700/499/79/7995881-konark-beach.jpg" alt="Konark Beach">
+                </div>
+                <div class="beach-info">
+                    <div class="beach-name">Konark Beach</div>
+                    <div class="beach-location">Konark</div>
+                    <div class="beach-about">Beautiful beach near the famous Sun Temple. Known for its scenic beauty and clean shores.</div>
+                    <div class="buttons-container">
+                        <button class="button know-more-btn">Know More</button>
+                        <button class="button book-now-btn"><a href="/user/booknow.html">Book Now</a></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Beach Card 5 -->
+            <div class="beach-card-last">
+                <div class="beach-image">
+                    <img src="https://etimg.etb2bimg.com/thumb/msid-95900030,imgsize-100140,width-1200,height-628,overlay-etinfra/govt-to-shift-international-tourism-offices-to-indian-high-commissions.jpg" alt="Astaranga Beach">
+                </div>
+                <div class="beach-info">
+                    <div class="beach-name">Astaranga Beach</div>
+                    <div class="beach-location">Puri</div>
+                    <div class="beach-about">Famous for spectacular sunsets and fishing activities. Name means 'colorful sunset' in Odia.</div>
+                    <div class="buttons-container">
+                        <button class="button know-more-btn">Know More</button>
+                        <button class="button book-now-btn"><a href="/user/booknow.html">Book Now</a></button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Beach Card 6 -->
+
+            <!-- Beach Card 7 -->
+            <div class="beach-card-last">
+                <div class="beach-image">
+                    <img src="https://www.gosahin.com/go/p/i/1565520836_ramchandi-beach-puri-2.jpg" alt="Ramchandi Beach">
+                </div>
+                <div class="beach-info">
+                    <div class="beach-name">Ramchandi Beach</div>
+                    <div class="beach-location">Konark</div>
+                    <div class="beach-about">Serene and quiet beach, perfect for a peaceful retreat. Known for its temple and lush surroundings.</div>
+                    <div class="buttons-container">
+                        <button class="button know-more-btn">Know More</button>
+                        <button class="button book-now-btn"><a href="/user/booknow.html">Book Now</a></button>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>We are dedicated to providing the best travel experiences for our customers.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Traveler Stories</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#faq">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@example.com</p>
+                <p>Phone: +1 234 567 890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Travel Planning Website. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

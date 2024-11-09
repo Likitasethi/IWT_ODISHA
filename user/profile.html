@@ -4,46 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Management</title>
-    <link rel="stylesheet" href="hero.css">
+  
     <link rel="stylesheet" href="profile.css">
     <style>
         
     </style>
 </head>
 <body>
-
-
-    <nav class="navbar">
-        <h1>Travel ODISHA</h1>
-        <ul class="nav-links">
-            <li><a href="hero.html">Home</a></li>
-            <li><a href="packages.html">Packages</a></li>
-            <li><a href="my_bookings.html">Bookings</a></li>
-            <li><a href="profile.html">Profile</a></li>
-        </ul>
-        <div class="search-box">
-            <input type="text" placeholder="Search...">
-            <button type="button">🔍</button>
+    <header>
+        <div class="blahh">
+            <div class="logo">
+                <h1>Travel Odisha</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="hero.html">Home</a></li>
+                    <li><a href="packages.html">Top Packages</a></li>
+                    <li><a href="my_bookings.html">Booking</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                </ul>
+            </nav>
         </div>
-    </nav>
-<div class="log">
-<div class="container">
-    <h2>Update Your Profile</h2>
-    <form>
-        <label for="profile-picture">Change Profile Picture:</label>
-        <input type="file" id="profile-picture" name="profile-picture"><br>
+    </header>
+    <br><br><br><br>
+
+    <div class="container">
+        <h2>Update Your Profile</h2>
+        <div class="profile-section">
+            <!-- Profile Picture -->
+            <div class="profile-picture">
+                <img src="path/to/default-profile-pic.jpg" alt="Profile Picture" id="profile-img">
+                <label for="profile-picture">Change Profile Picture:</label>
+                <input type="file" id="profile-picture" name="profile-picture">
+            </div>
+
+            <!-- Profile Details -->
+            <div class="profile-info">
+                <form>
+                    <label for="username">Name:</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your name"><br>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email"><br>
+
+                    <button type="submit">Save Changes</button>
+                </form>
+            </div>
+        </div>
         
-        <label for="username">Name:</label>
-        <input type="text" id="username" name="username" ><br>
+        <button class="logout-button" onclick="logout()">Logout</button>
+    </div>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" ><br>
 
-        <button type="submit">Save Changes</button>
-    </form>
-    <button class="logout-button" onclick="logout()">Logout</button>
-</div>
-</div>
 
 
 <script>

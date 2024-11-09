@@ -1,69 +1,171 @@
-.log {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(to right, rgb(0, 201, 255), rgb(146, 254, 157));
-    margin: 0;
+.blahh{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+body{
+    background-image: url(https://cdn.dribbble.com/users/49272/screenshots/4348442/geojit-nature-dribb.jpg);
+    background-size:cover;
+    background-position: center;
 }
 
+/* Header and Navbar Styling */
+header {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4); 
+    
+    z-index: 100;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+    display: flex;
+    justify-content: space-between; /* Distribute space between the logo and nav links */
+    align-items: center;
+}
+
+
+
+header nav {
+    position: relative;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end; /* Align the links to the right */
+   
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 0;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for navbar links */
+header nav ul li a:hover {
+    background-color: transparent;
+}
+
+/* Hover on the navbar itself to slide links into view */
+header nav:hover ul {
+    margin-right: 0; /* Bring links back into view */
+}
+
+
 .container {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    width: 400px;
-    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
+    text-align: center;
     margin-bottom: 20px;
-    color: #333; 
+    color: #333;
 }
 
-label {
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.profile-picture {
+    flex: 1;
+    text-align: center;
+}
+
+.profile-picture img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+}
+
+.profile-info {
+    flex: 2;
+}
+
+.profile-info label {
     display: block;
-    margin-bottom: 5px;
-    text-align: left;
+    margin-bottom: 8px;
+    color: #555;
 }
 
-input[type="file"],
-input[type="text"],
-input[type="email"] {
+.profile-info input {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
 }
 
-button {
-    background: transparent;
-    color: rgb(0, 123, 255);
-    padding: 10px;
-    border: 2px solid #007bff; /* Border to define the button */
-    border-radius: 5px;
+.profile-info button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
     cursor: pointer;
-    width: 100%;
-    font-size: 16px;
-    transition: background 0.3s, color 0.3s; /* Transition for hover effects */
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background: rgb(0, 123, 255); 
-    color: white; 
+.profile-info button:hover {
+    background-color: #0056b3;
 }
 
 .logout-button {
+    display: inline-block;
     margin-top: 20px;
-    background: transparent;
-    color: rgb(219, 54, 70); 
-    border: 2px solid rgb(220, 56, 72); 
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
 
 .logout-button:hover {
-    background: rgb(220, 53, 69); 
-    color: white; 
+    background-color: #d32f2f;
+}
+
+@media (max-width: 768px) {
+    .profile-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-info input {
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    .profile-picture img {
+        width: 120px;
+        height: 120px;
+    }
 }
