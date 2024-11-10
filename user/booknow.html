@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Page</title>
+    <link rel="stylesheet" href="hero.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: 
+                url('https://getwallpapers.com/wallpaper/full/8/3/9/1125825-gorgerous-beach-background-pictures-3000x1843-windows-7.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .booking-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            background-color: transparent;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            padding: 2rem;
+        }
+
+        .destination-header {
+            position: relative;
+            height: 300px;
+            margin: -2rem -2rem 2rem -2rem;
+            border-radius: 12px 12px 0 0;
+            overflow: hidden;
+        }
+
+        .destination-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .destination-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            color: white;
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .image-gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .booking-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .booking-details-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .booking-details-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            color: #2c3e50;
+        }
+
+        .booking-details-item p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .destination-info {
+            padding: 2rem;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .rating span {
+            color: #ffc107;
+            font-size: 1.2rem;
+        }
+
+        .booking-form {
+            background-color: transparent;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+        }
+
+        .form-group input {
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+        }
+
+        .price-tag {
+            background-color: #28a745;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        .booking-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            margin-top: 1.5rem;
+        }
+
+        .booking-button:hover {
+            background-color: #0056b3;
+        }
+
+        .amenities {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .amenity-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem;
+        }
+
+        .amenity-item i {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Travel Odisha</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="hero.html">Home</a></li>
+                    <li><a href="packages.html">Top packages</a></li>
+                    <li><a href="my_bookings.html">Booking</a></li>
+                    <li><a href="profile.html">profile</a></li>
+                </ul>
+            </nav>
+            <div style="clear: both;"></div>
+        </div>
+    </header>
+
+    <div class="booking-container">
+        <div class="destination-header">
+            <img src="https://www.discoverwalks.com/blog/wp-content/uploads/2022/06/4096px-shri_jagannath_temple-1536x970.jpg" alt="Destination Cover" style="background-position: center; ">
+            <div class="destination-overlay">
+                <h1>Puri</h1>
+                <p></p>
+            </div>
+        </div>
+
+        <div class="image-gallery">
+            <img src=" https://assets.telegraphindia.com/telegraph/2023/Apr/1680473433_fb126a0355b1e68b58145208b306cd0f.gif" alt="">
+            <img src="https://pix10.agoda.net/hotelImages/568503/-1/daaea72308aebc68e001f1056a60019f.jpg" alt="">
+            <img src="https://th.bing.com/th/id/OIP.VEgfgc65y-7jzc_0wKb7JgHaD1?w=609&h=316&rs=1&pid=ImgDetMain" alt="">
+        </div>
+
+        <div class="destination-info">
+            <h2>Destination Overview</h2>
+            <div class="rating">
+                <span>⭐⭐⭐⭐⭐</span>
+                <p>4.8 (120 reviews)</p>
+            </div>
+            <p>Puri in Odisha is one of the four must-visit pilgrimage sites for Hindus because of Jagannath Temple that forms the part of Char Dham in India. Puri is a beach city located on the coast of Bay of Bengal which is one of the favourites among people of West Bengal for a short trip. </p>
+            
+            <div class="amenities">
+                <div class="amenity-item">
+                    <span>🏨 5-Star Hotel</span>
+                </div>
+                <div class="amenity-item">
+                    <span>🍽️ Breakfast Included</span>
+                </div>
+                <div class="amenity-item">
+                    <span>🚗 Free Boats Transfer</span>
+                </div>
+                <div class="amenity-item">
+                    <span>📶 No Wi-Fi</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="booking-details">
+            <div class="booking-details-item">
+                <h3>Departure</h3>
+                <p>Nayagarh</p>
+                <p>Jan 1, 2025</p>
+            </div>
+            <div class="booking-details-item">
+                <h3>Return</h3>
+                <p>Berhampur</p>
+                <p>jan5, 2025</p>
+            </div>
+            <div class="booking-details-item">
+                <h3>Travelers</h3>
+                <p>2 Adults, 1 Child</p>
+            </div>
+            <div class="price-tag">
+                ₹4000
+            </div>
+        </div>
+
+        <div class="booking-form">
+            <h2>Traveler Information</h2>
+            <form class="form-grid">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" required placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" required placeholder="Enter your phone number">
+                </div>
+                <div class="form-group">
+                    <label for="special-requests">Special Requests</label>
+                    <input type="text" id="special-requests" placeholder="Any special requests?">
+                </div>
+                <button type="submit" class="booking-button">Book Now</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>We are dedicated to providing the best travel experiences for our customers.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Traveler Stories</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#faq">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@example.com</p>
+                <p>Phone: +1 234 567 890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Travel Planning Website. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+</body>
+</html>

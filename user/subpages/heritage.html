@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heritage Sites of Odisha</title>
+    
+    <link rel="stylesheet" href="/user/hero.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            background-image: url(); /* Add your hero image URL here */
+            background-position: center;
+            background-size: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            font-size: 3rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+        }
+
+        .container {
+            max-width: 1300px; /* Increased the size of the outer div */
+            margin: 0 auto;
+            padding: 40px 20px; /* Increased padding for more spacing */
+        }
+
+        h1 {
+            text-align: center;
+            color: #8b4513;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+        }
+
+        .filters {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .filter-btn {
+            padding: 8px 20px;
+            border: none;
+            border-radius: 25px;
+            background-color: white;
+            color: #666;
+            cursor: pointer;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background-color: #78ba31;
+            color: white;
+        }
+
+        .heritage-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .heritage-card {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+            justify-content: space-between;
+            height: auto;
+            padding: 20px; /* Added padding inside each card */
+            transition: transform 0.3s ease;
+        }
+
+        .heritage-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .heritage-card img {
+            width: 50%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .heritage-info {
+            width: 45%;
+            color: #333;
+        }
+
+        .heritage-name {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .heritage-location {
+            font-size: 0.9rem;
+            color: #ffd700;
+            margin-bottom: 8px;
+        }
+
+        .heritage-about {
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+
+        .buttons-container {
+            margin-top: 15px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-right: 10px;
+        }
+
+        .know-more-btn {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .know-more-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .book-now-btn {
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+        }
+
+        .book-now-btn:hover {
+            background-color: #218838;
+        }
+
+        @media (max-width: 1024px) {
+            .heritage-card img,
+            .heritage-info {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .heritage-card {
+                flex-direction: column;
+            }
+            .heritage-card img,
+            .heritage-info {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Travel Odisha</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/user/hero.html">Home</a></li>
+                    <li><a href="/user/packages.html">Top Packages</a></li>
+                    <li><a href="/user/my_bookings.html">Booking</a></li>
+                    <li><a href="/user/profile.html">Profile</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Hero Section (Top-Most Image) -->
+        <div class="hero">
+            <div class="hero-text">Explore the Heritage of Odisha</div>
+        </div>
+<br><br>
+
+        <div class="filters">
+            <button class="filter-btn"><a href="/user/hero.html">All</a></button>
+            <button class="filter-btn"><a href="temples.html">Temples</a></button>
+            <button class="filter-btn"><a href="beaches.html">Beaches</a></button>
+            <button class="filter-btn"><a href="wildlife.html">Wildlife</a></button>
+            <button class="filter-btn active"><a href="heritage.html">Heritage</a></button>
+            <button class="filter-btn"><a href="nature.html">Nature</a></button>
+        </div>
+
+        <h1>Heritage Sites of Odisha</h1>
+        <div class="heritage-grid">
+            <!-- Heritage Card 1 -->
+            <div class="heritage-card">
+               
+                <div class="heritage-info">
+                    <div class="heritage-name">Konark Sun Temple</div>
+                    <div class="heritage-location">Konark</div>
+                    <div class="heritage-about">UNESCO World Heritage site, built in the 13th century. Famous for its massive chariot-shaped architecture with 24 wheels and intricate stone carvings.</div>
+                    <div class="buttons-container">
+                        <button class="button know-more-btn">Know More</button>
+                        <a href="/user/booknow.html"><button class="button book-now-btn" >Book Now</button></a>
+                    </div>
+                    
+                </div>
+                <img src="https://www.increedibleindia.com/wp-content/uploads/2020/12/Sun-Temple-Konark1-scaled.jpg" alt="Konark Sun Temple">
+            </div>
+
+
+
+            <!-- Heritage Card 3 -->
+            <div class="heritage-card">
+                <img src="https://www.holidify.com/images/compressed/5901.jpg" alt="Dhauli Shanti Stupa">
+                <div class="heritage-info">
+                    <div class="heritage-name">Dhauli Shanti Stupa</div>
+                    <div class="heritage-location">Bhubaneswar</div>
+                    <div class="heritage-about">Peace pagoda built atop Dhauli hills, marking the site of ancient Kalinga War. Features Ashokan rock edicts from the 3rd century BCE.</div>
+                    <div class="buttons-container">
+                        <button class="button know-more-btn">Know More</button>
+                        <a href="/user/booknow.html"><button class="button book-now-btn" >Book Now</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Heritage Card 4 -->
+            <div class="heritage-card">
+                <div class="heritage-info">
+                    <div class="heritage-name">Ratnagiri Buddhist Excavation</div>
+                    <div class="heritage-location">Jajpur</div>
+                    <div class="heritage-about">Buddhist ruins from the 6th-9th century. Features stupas, monasteries, and sculptures that provide insight into ancient Buddhist culture.</div>
+                    <div class="buttons-container">
+                        <button class="button know-more-btn">Know More</button>
+                        <button class="button book-now-btn" ><a href="/user/booknow.html">Book Now</a></button>
+                    </div>
+                </div>
+                <img src="https://bhubaneswartourism.in/images/places-to-visit/headers/ratnagiri-buddhist-excavation-bhubaneswar-tourism-entry-fee-timings-holidays-reviews-header.jpg" alt="Ratnagiri Buddhist Excavation">
+            </div>
+
+            <!-- Heritage Card 5 -->
+            <div class="heritage-card">
+                <img src="https://img.veenaworld.com/wp-content/uploads/2021/12/Chilika-Lake-e1641636304479.jpg" alt="Chilika Lake">
+                <div class="heritage-info">
+                    <div class="heritage-name">Chilika Lake</div>
+                    <div class="heritage-location">Khurda</div>
+                    <div class="heritage-about">Asia's largest brackish water lagoon, home to thousands of migratory birds. Known for its rich biodiversity.</div>
+                    <div class="buttons-container">
+                        <button class="button know-more-btn">Know More</button>
+                        <a href="/user/booknow.html"><button class="button book-now-btn" >Book Now</button></a>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- Heritage Card 6 -->
+            <div class="heritage-card">
+               
+                <div class="heritage-info">
+                    <div class="heritage-name">Lingaraj Temple</div>
+                    <div class="heritage-location">Bhubaneswar</div>
+                    <div class="heritage-about">One of the oldest and largest temples dedicated to Lord Shiva, a stunning example of Kalinga architecture.</div>
+                    <div class="buttons-container">
+                        <button class="button know-more-btn">Know More</button>
+                        <a href="/user/booknow.html"><button class="button book-now-btn" >Book Now</button></a>
+                    </div>
+                    
+                </div>
+                <img src="https://th.bing.com/th/id/R.216c2571b0c5d532ae2a45c065425173?rik=YiVa%2fJMLLJ857A&riu=http%3a%2f%2fwww.tirthayatra.org%2fwp-content%2fuploads%2f2018%2f04%2fLingaraj_temple_Bhubaneswar.jpg&ehk=tceclaOuoBRc1ElAlagnfVG6jMo2mViO2V3vbTWOotM%3d&risl=&pid=ImgRaw&r=0" alt="Lingaraj Temple">
+            </div>
+
+            <!-- Heritage Card 7 -->
+            <div class="heritage-card">
+                <img src="https://th.bing.com/th/id/R.35a0c075ee86f81340ebee7816613a1a?rik=l9KMBwgVIvplFA&riu=http%3a%2f%2fwww.holidify.com%2fimages%2fcmsuploads%2fcompressed%2fMukteshwar_Temple2_20170424182233.jpg&ehk=C8kJGziHpdO8Ot2AvbIRjb8c6kE8OP36I8lx%2bWc97Go%3d&risl=&pid=ImgRaw&r=0" alt="Mukteswar Temple">
+                <div class="heritage-info">
+                    <div class="heritage-name">Mukteswar Temple</div>
+                    <div class="heritage-location">Bhubaneswar</div>
+                    <div class="heritage-about">Known as the 'Gem of Odisha temples', it is famous for its architectural beauty, intricate carvings, and sculptural work.</div>
+                    <div class="buttons-container">
+                        <button class="button know-more-btn">Know More</button>
+                        <a href="/user/booknow.html"><button class="button book-now-btn" >Book Now</button></a>
+                    </div>
+                   
+                </div>
+            </div>
+
+            <!-- Heritage Card 8 -->
+            <div class="heritage-card">
+               
+                <div class="heritage-info">
+                    <div class="heritage-name">Bhubaneswar Caves</div>
+                    <div class="heritage-location">Bhubaneswar</div>
+                    <div class="heritage-about">Ancient rock-cut caves with fascinating carvings, some of which are Buddhist, Hindu, and Jain in origin.</div>
+                    <div class="buttons-container">
+                        <button class="button know-more-btn">Know More</button>
+                        <a href="/user/booknow.html"><button class="button book-now-btn" >Book Now</button></a>
+                    </div>
+                   
+                </div>
+                <img src="https://live.staticflickr.com/680/22823466681_a39218c15d_b.jpg" alt="Bhubaneswar Caves">
+            </div>
+
+            <!-- Heritage Card 9 -->
+            <div class="heritage-card">
+                <img src="https://2.bp.blogspot.com/-eRA6_h5lfVE/XFg70k5UMwI/AAAAAAABTds/4ePGiHS3qZE29L84t-ctAPEi6kjG6FaOgCLcBGAs/w1200-h630-p-k-no-nu/2017-12-24.jpg" alt="Baleshwar Temple">
+                <div class="heritage-info">
+                    <div class="heritage-name">Baleshwar Temple</div>
+                    <div class="heritage-location">Balasore</div>
+                    <div class="heritage-about">An ancient temple dedicated to Lord Shiva, featuring a unique architectural design and carvings.</div>
+                    <div class="buttons-container">
+                        <button class="button know-more-btn">Know More</button>
+                        <a href="/user/booknow.html"><button class="button book-now-btn" >Book Now</button></a>
+                    </div>
+                   
+                </div>
+            </div>
+
+            <!-- Heritage Card 10 -->
+            <div class="heritage-card">
+                
+                <div class="heritage-info">
+                    <div class="heritage-name">Similipal Tiger Reserve</div>
+                    <div class="heritage-location">Mayurbhanj</div>
+                    <div class="heritage-about">A pristine wildlife sanctuary and tiger reserve, home to a diverse range of flora and fauna, including Royal Bengal tigers.</div>
+                    <div class="buttons-container">
+                        <button class="button know-more-btn">Know More</button>
+                        <a href="/user/booknow.html"><button class="button book-now-btn" >Book Now</button></a>
+                    </div>
+                    
+                </div>
+                <img src="https://mytravelframes.com/wp-content/uploads/2021/04/IMG_0025.jpg" alt="Similipal Tiger Reserve">
+            </div>
+
+
+
+           
+
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>We are dedicated to providing the best travel experiences for our customers.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Traveler Stories</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#faq">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@example.com</p>
+                <p>Phone: +1 234 567 890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Travel Planning Website. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

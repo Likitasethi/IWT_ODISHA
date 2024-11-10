@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temples of Odisha</title>
+    
+    <link rel="stylesheet" href="/user/hero.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            background-image: url('https://www.visakhatravels.com/images/slider/slide/slide1.jpg'); 
+            background-position: center;
+            background-size: cover;
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            font-size: 3rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #8b4513;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+        }
+
+        .filters {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .filter-btn {
+            padding: 8px 20px;
+            border: none;
+            border-radius: 25px;
+            background-color: white;
+            color: #666;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background-color: #78ba31;
+            color: white;
+        }
+
+        /* Temple Grid */
+        .temple-section {
+            margin-bottom: 50px;
+        }
+
+        .temple-row {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        .temple-row.reverse {
+            flex-direction: row-reverse; /* Reverse order for alternating layout */
+        }
+
+        .temple-image {
+            width: 50%;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .temple-info {
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 15px;
+        }
+
+        .temple-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .temple-location {
+            font-size: 1rem;
+            color: #ffcc00;
+            margin-bottom: 0.5rem;
+        }
+
+        .temple-about {
+            color: #555;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .buttons-container {
+            display: flex;
+            gap: 10px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-right: 10px;
+        }
+
+        .know-more-btn {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .know-more-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .book-now-btn {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .book-now-btn:hover {
+            background-color: #218838;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .temple-row {
+                flex-direction: column;
+            }
+
+            .temple-image,
+            .temple-info {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Travel Odisha</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/user/hero.html">Home</a></li>
+                    <li><a href="/user/packages.html">Top Packages</a></li>
+                    <li><a href="/user/my_bookings.html">Booking</a></li>
+                    <li><a href="/user/profile.html">Profile</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <!-- Hero Section (Top-Most Image) -->
+        <div class="hero">
+            <div class="hero-text">Explore the Temples of Odisha</div>
+        </div>
+<br><br>
+        <div class="filters">
+            <button class="filter-btn"><a href="/user/hero.html">All</a></button>
+            <button class="filter-btn active"><a href="temples.html">Temples</a></button>
+            <button class="filter-btn"><a href="beaches.html">Beaches</a></button>
+            <button class="filter-btn"><a href="wildlife.html">Wildlife</a></button>
+            <button class="filter-btn"><a href="heritage.html">Heritage</a></button>
+            <button class="filter-btn"><a href="nature.html">Nature</a></button>
+        </div>
+
+        <h1>Famous Temples in Odisha</h1>
+
+        <div class="temple-section">
+            <!-- Temple Row Example 1 (Jagannath Temple) -->
+            <div class="temple-row">
+                <div class="temple-image" style="background-image: url('https://organiser.org/wp-content/uploads/2024/07/11-2-1-jpg.webp')"></div>
+                <div class="temple-info">
+                    <div class="temple-name">Jagannath Temple</div>
+                    <div class="temple-location">Puri</div>
+                    <div class="temple-about">The iconic temple dedicated to Lord Jagannath. Famous for its annual Rath Yatra festival.</div>
+                    <div class="buttons-container">
+                        <button class="button know-more-btn">Know More</button>
+                       <a href="/user/booknow.html"> <button class="button book-now-btn">Book Now</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Temple Row Example 2 (Lingaraj Temple) -->
+            <div class="temple-row reverse">
+                <div class="temple-image" style="background-image: url('https://static.toiimg.com/photo/msid-47158729,width-96,height-65.cms')"></div>
+                <div class="temple-info">
+                    <div class="temple-name">Lingaraj Temple</div>
+                    <div class="temple-location">Bhubaneswar</div>
+                    <div class="temple-about">The largest temple in Bhubaneswar, showcasing intricate Kalinga architecture.</div>
+                    <div class="buttons-container">
+                        <button class="button know-more-btn">Know More</button>
+                        <a href="/user/booknow.html"> <button class="button book-now-btn">Book Now</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Temple Row Example 3 (Sun Temple) -->
+            <div class="temple-row">
+                <div class="temple-image" style="background-image: url('https://www.tripvaani.com/wp-content/uploads/2020/05/Konark-Sun-Temple-or-Black-Pagoda-The-Chariot-of-Sun.jpg')"></div>
+                <div class="temple-info">
+                    <div class="temple-name">Sun Temple</div>
+                    <div class="temple-location">Konark</div>
+                    <div class="temple-about">UNESCO World Heritage site shaped like a massive chariot with intricate carvings.</div>
+                    <div class="buttons-container">
+                        <button class="button know-more-btn">Know More</button>
+                        <a href="/user/booknow.html"> <button class="button book-now-btn">Book Now</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Temple Row Example 4 (Maa Tarini Temple) -->
+            <div class="temple-row reverse">
+                <div class="temple-image" style="background-image: url('https://pbs.twimg.com/media/FhQixGyaYAEH8aa.jpg')"></div>
+                <div class="temple-info">
+                    <div class="temple-name">Maa Tarini Temple</div>
+                    <div class="temple-location">Keonjhar</div>
+                    <div class="temple-about">One of the most important Shakti Pithas in Odisha.</div>
+                    <div class="buttons-container">
+                        <button class="button know-more-btn">Know More</button>
+                        <a href="/user/booknow.html"> <button class="button book-now-btn">Book Now</button></a>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- End of temple-section -->
+
+    </div> <!-- End of container -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>We are dedicated to providing the best travel experiences for our customers.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Traveler Stories</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#faq">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@example.com</p>
+                <p>Phone: +1 234 567 890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Travel Planning Website. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

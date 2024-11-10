@@ -111,7 +111,7 @@ p a:hover {
         <h1>Login</h1>
         <form id="loginForm">
             <div class="form-group">
-                <i>✉️</i>
+                <i>✉</i>
                 <input type="email" id="email" placeholder="Your Email" required>
             </div>
             <div class="form-group">
@@ -140,7 +140,7 @@ p a:hover {
         const predefinedUser = predefinedUsers.find(user => user.email === email && user.password === password);
 
         if (predefinedUser) {
-            alert(`Welcome, ${predefinedUser.role.toUpperCase()}!`);
+            alert(Welcome, $`{predefinedUser.role.toUpperCase()}!`);
             if (predefinedUser.role === 'admin') {
                 window.location.href = "ADMIN/ad_dashboard.html";
             } else {
@@ -150,12 +150,12 @@ p a:hover {
         }
 
         if (travelerData && travelerData.email === email && travelerData.password === password) {
-            alert(`Welcome, ${travelerData.name}!`);
-            window.location.href = "USER/hero.html";
+            alert(Welcome, `${travelerData.name}!`);
+            window.location.href = "/user/hero.html";
         } else {
             alert('Invalid email or password. Please try again.');
         }
     });
 </script>
-</body>
+</body>`
 </html>
