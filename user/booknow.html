@@ -14,8 +14,7 @@
 
         body {
             font-family: Arial, sans-serif;
-            background-image: 
-                url('https://getwallpapers.com/wallpaper/full/8/3/9/1125825-gorgerous-beach-background-pictures-3000x1843-windows-7.jpg');
+            background-image:url('https://getwallpapers.com/wallpaper/full/8/3/9/1125825-gorgerous-beach-background-pictures-3000x1843-windows-7.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -333,6 +332,36 @@
             <p>&copy; 2024 Travel Planning Website. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        function getSelectedPackage() {
+    const packageData = localStorage.getItem('selectedPackage');
+    return packageData ? JSON.parse(packageData) : null;
+}
+
+// Function to display the package details on the booking page
+function displayPackageDetails() {
+    const packageDetails = getSelectedPackage();
+
+    if (packageDetails) {
+        // Set the destination title and description
+        document.querySelector('.destination-overlay h1').textContent = packageDetails.destination;
+        document.querySelector('.destination-info p').textContent = packageDetails.description;
+
+        // Set the destination image
+        const destinationImage = document.querySelector('.destination-header img');
+        destinationImage.src = packageDetails.imageUrl;
+        destinationImage.alt = `${packageDetails.destination} Image`;
+
+        // Set the price and rating
+        document.querySelector('.price-tag').textContent = `₹${packageDetails.price}`;
+        document.querySelector('.rating p').textContent = `${packageDetails.rating} (120 reviews)`;
+    } else {
+        console.error('No package data found.');
+    }
+}
+
+    </script>
 
 
 </body>

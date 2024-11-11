@@ -18,19 +18,18 @@ body {
     margin: 0 auto;
 }
 
-/* Header and Navbar Styling */
 header {
     position: relative;
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.4); 
+    background-color: rgb(80, 169, 188); 
     
     z-index: 100;
     padding: 15px 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
     display: flex;
-    justify-content: space-between; /* Distribute space between the logo and nav links */
+    justify-content: space-between; 
     align-items: center;
 }
 
