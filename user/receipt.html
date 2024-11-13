@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Receipt</title>
+    <style>
+        /* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Roboto', sans-serif; /* Clean modern font */
+    background-color: #f9fafb; /* Light background */
+    color: #333;
+    line-height: 1.6;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Receipt container */
+.receipt-container {
+    background: #fff; /* Clean white background for card */
+    width: 100%;
+    max-width: 900px;
+    padding: 30px;
+    border-radius: 20px; /* Smooth rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for floating effect */
+    overflow: hidden;
+    border-top: 5px solid #2ecc71; /* Subtle accent at the top */
+    position: relative;
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Receipt header */
+h1 {
+    font-size: 3rem;
+    color: #2c3e50;
+    text-align: center;
+    font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* Section headers */
+h2 {
+    font-size: 1.5rem;
+    color: #34495e;
+    margin-bottom: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid #16a085; /* Accent color */
+    padding-bottom: 5px;
+}
+
+/* General paragraph styling */
+p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #555;
+    letter-spacing: 0.5px;
+}
+
+strong {
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+/* Price highlight */
+#destination-price {
+    font-size: 1.5rem;
+    color: #27ae60; /* Rich green color */
+    font-weight: bold;
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #eafaf1; /* Light green background */
+    border-radius: 5px;
+}
+
+/* Special requests section */
+#special-requests {
+    font-style: italic;
+    color: #7f8c8d;
+}
+
+/* Traveler info */
+.receipt-details, .traveler-details {
+    margin-bottom: 30px;
+    background-color: #f9fafb; /* Light gray background */
+    border-radius: 10px;
+    padding: 20px;
+    border-left: 4px solid #16a085;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Soft box shadow */
+}
+
+/* Confirmation section */
+.confirmation {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #2ecc71;
+    margin-top: 25px;
+    background: #eafaf1;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    animation: slideIn 0.8s ease-out;
+}
+
+/* Animated fadeIn */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation for confirmation message */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .receipt-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+/* Hover effects for links (if any) */
+a {
+    color: #16a085;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #27ae60;
+}
+
+/* Icon Styling (if used in the future) */
+.icon {
+    font-size: 1.2rem;
+    margin-right: 8px;
+    color: #16a085;
+}
+
+    </style>
+</head>
+<body>
+    <div class="receipt-container">
+        <h1>Booking Receipt</h1>
+        
+        <!-- Booking Summary -->
+        <div class="receipt-details">
+            <h2>Booking Summary</h2>
+            <p><strong>Destination:</strong> <span id="destination-name"></span></p>
+            <p><strong>Location:</strong> <span id="destination-location"></span></p>
+            <p><strong>Price:</strong> ₹<span id="destination-price"></span></p>
+            <p><strong>Booking Date:</strong> <span id="booking-date"></span></p>
+        </div>
+
+        <!-- Traveler Information -->
+        <div class="traveler-details">
+            <h2>Traveler Information</h2>
+            <p><strong>Name:</strong> <span id="traveler-name"></span></p>
+            <p><strong>Email:</strong> <span id="traveler-email"></span></p>
+            <p><strong>Phone:</strong> <span id="traveler-phone"></span></p>
+            <p><strong>Special Requests:</strong> <span id="special-requests"></span></p>
+        </div>
+        
+        <div class="confirmation">
+            <p>Thank you for booking with us! We look forward to hosting you!</p>
+        </div>
+    </div>
+
+  
+</body>
+</html>

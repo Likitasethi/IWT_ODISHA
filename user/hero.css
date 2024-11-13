@@ -322,7 +322,7 @@ header nav:hover ul {
     font-weight: 500;
     font-size: 0.9rem;
     padding: 10px 20px;
-    border-radius: 25px;
+    border-radius: 10px;
     display: inline-block;
     width: 100%;
     text-align: center;
@@ -406,9 +406,6 @@ footer {
 }
 .destination-categories .category:hover {
     background: #3a9ca1;
-}
-.destination-categories .category.active {
-    background: #d9534f;
 }
 .destination-categories .category i {
     font-size: 24px;
@@ -555,8 +552,9 @@ background-color: #45a049;
     margin: 0 0 20px;
     color: #fff;
 }
-.destination-section .destination .info .btn {
+.destination-section .destination .info .btnn {
     background: #fff;
+    
     color: #5bc0be;
     padding: 10px 20px;
     text-decoration: none;

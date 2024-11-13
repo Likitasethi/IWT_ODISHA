@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Your Trip</title>
+  <link rel="stylesheet" href="hero.css">
+ 
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 0;
+      
+    }
+
+    /* Header */
+    /* header {
+      background-color: #2c5282;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header .logo h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    } */
+
+    /* Main Container */
+    /* .container {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      text-align: center;
+    } */
+
+    /* Package Image */
+    .package-image {
+      width: 100%;
+      height: 550px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Package Title */
+    .container h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #242724;
+    }
+
+    /* Package Details */
+    .package-details {
+      margin-bottom: 20px;
+    }
+
+    .detail-item {
+      font-size: 1.1rem;
+      margin: 10px 0;
+      color: #555;
+    }
+
+    .detail-item strong {
+      font-weight: bold;
+      color: #2c5282;
+    }
+
+    /* Highlights Section */
+    .package-highlights {
+      text-align: left;
+      margin: 20px 0;
+    }
+
+    .package-highlights h3 {
+      font-size: 1.3rem;
+      color: #2c5282;
+      margin-bottom: 10px;
+    }
+
+    .package-highlights ul {
+      list-style-type: none;
+      padding-left: 0;
+      font-size: 1rem;
+    }
+
+    .package-highlights li {
+      margin-bottom: 10px;
+      padding-left: 15px;
+      position: relative;
+    }
+
+    .package-highlights li::before {
+      content: "•";
+      color: #f6ad55;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    /* Button Styles */
+    .book-btn {
+      background-color: #2c5282;
+      color: #fff;
+      padding: 12px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: background-color 0.3s;
+      display: inline-block;
+      margin-top: 30px;
+    }
+
+    .book-btn:hover {
+      background-color: #4299e1;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        padding: 15px;
+      }
+
+      .package-image {
+        height: 250px;
+      }
+
+      .container h2 {
+        font-size: 1.8rem;
+      }
+
+      .book-btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Travel Odisha</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="hero.html">Home</a></li>
+                    <li><a href="packages.html">Top packages</a></li>
+                    <li><a href="my_bookings.html">Booking</a></li>
+                    <li><a href="profile.html">profile</a></li>
+                </ul>
+            </nav>
+            <div style="clear: both;"></div>
+        </div>
+    </header>
+
+  <div class="container">
+    <h2>Confirm Your Booking</h2>
+
+    <div id="packageDetails">
+      <!-- Package details will be inserted here by JavaScript -->
+    </div>
+
+    <a href="receipt.html" class="book-btn">Proceed to Final Booking</a>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>About Us</h3>
+            <p>We are dedicated to providing the best travel experiences for our customers.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Traveler Stories</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#faq">FAQs</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>Email: info@example.com</p>
+            <p>Phone: +1 234 567 890</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Travel Planning Website. All rights reserved.</p>
+    </div>
+</footer>
+
+  <script>
+    // Get package details from localStorage
+    const packageDetails = JSON.parse(localStorage.getItem('selectedPackage'));
+    const packageDetailsDiv = document.getElementById('packageDetails');
+
+    if (packageDetails) {
+      packageDetailsDiv.innerHTML = `
+        <div class="package-image" style="background-image: url('${packageDetails.image}');"></div>
+        <h3>${packageDetails.title}</h3>
+        <div class="package-details">
+          <p class="detail-item"><strong>Duration:</strong> ${packageDetails.duration}</p>
+          <p class="detail-item"><strong>Price:</strong> ${packageDetails.price}</p>
+        </div>
+        <div class="package-highlights">
+          <h3>Highlights:</h3>
+          <ul>
+            ${packageDetails.highlights.map(item => `<li>${item}</li>`).join('')}
+          </ul>
+        </div>
+      `;
+    } else {
+      packageDetailsDiv.innerHTML = '<p>No package selected. Please select a package to continue.</p>';
+    }
+  </script>
+
+</body>
+</html>

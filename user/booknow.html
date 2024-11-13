@@ -15,7 +15,7 @@
         body {
             font-family: Arial, sans-serif;
             background-image: 
-                url('https://getwallpapers.com/wallpaper/full/8/3/9/1125825-gorgerous-beach-background-pictures-3000x1843-windows-7.jpg');
+                url('https://wallpaperaccess.com/full/359978.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -34,7 +34,7 @@
 
         .destination-header {
             position: relative;
-            height: 300px;
+            height: 500px;
             margin: -2rem -2rem 2rem -2rem;
             border-radius: 12px 12px 0 0;
             overflow: hidden;
@@ -86,21 +86,75 @@
             border-radius: 8px;
         }
 
-        .booking-details-item {
-            display: flex;
-            flex-direction: column;
-        }
+        /* General styling for the booking details container */
+.booking-details-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-        .booking-details-item h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.8rem;
-            color: #2c3e50;
-        }
+/* Label Styling */
+.booking-details-item label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+    text-transform: capitalize;
+}
 
-        .booking-details-item p {
-            font-size: 1rem;
-            color: #666;
-        }
+/* Select box styling */
+.booking-details-item select  {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #555;
+    transition: border-color 0.3s ease;
+}
+
+.booking-details-item input  {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #555;
+    transition: border-color 0.3s ease;
+}
+/* Hover and focus effects */
+.booking-details-item select:hover {
+    border-color: #4CAF50;
+}
+
+.booking-details-item select:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* Option styling */
+.booking-details-item select option {
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Responsive styling for mobile screens */
+@media (max-width: 600px) {
+    .booking-details-item select {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
 
         .destination-info {
             padding: 2rem;
@@ -227,26 +281,28 @@
 
     <div class="booking-container">
         <div class="destination-header">
-            <img src="https://www.discoverwalks.com/blog/wp-content/uploads/2022/06/4096px-shri_jagannath_temple-1536x970.jpg" alt="Destination Cover" style="background-position: center; ">
+            <img id="destination-image" src="" alt="Destination Cover">
             <div class="destination-overlay">
-                <h1>Puri</h1>
-                <p></p>
+                <h1 id="destination-name">Destination</h1>
+                <p id="destination-location"></p>
             </div>
         </div>
-
+<!-- 
         <div class="image-gallery">
-            <img src=" https://assets.telegraphindia.com/telegraph/2023/Apr/1680473433_fb126a0355b1e68b58145208b306cd0f.gif" alt="">
+            
             <img src="https://pix10.agoda.net/hotelImages/568503/-1/daaea72308aebc68e001f1056a60019f.jpg" alt="">
             <img src="https://th.bing.com/th/id/OIP.VEgfgc65y-7jzc_0wKb7JgHaD1?w=609&h=316&rs=1&pid=ImgDetMain" alt="">
-        </div>
+        </div> -->
 
         <div class="destination-info">
             <h2>Destination Overview</h2>
+            
             <div class="rating">
                 <span>⭐⭐⭐⭐⭐</span>
                 <p>4.8 (120 reviews)</p>
             </div>
-            <p>Puri in Odisha is one of the four must-visit pilgrimage sites for Hindus because of Jagannath Temple that forms the part of Char Dham in India. Puri is a beach city located on the coast of Bay of Bengal which is one of the favourites among people of West Bengal for a short trip. </p>
+            <p id="destination-description"></p>
+           
             
             <div class="amenities">
                 <div class="amenity-item">
@@ -267,21 +323,26 @@
         <div class="booking-details">
             <div class="booking-details-item">
                 <h3>Departure</h3>
-                <p>Nayagarh</p>
-                <p>Jan 1, 2025</p>
+                <input type="text">
+               
             </div>
             <div class="booking-details-item">
-                <h3>Return</h3>
-                <p>Berhampur</p>
-                <p>jan5, 2025</p>
+                <input type="date">
             </div>
             <div class="booking-details-item">
-                <h3>Travelers</h3>
-                <p>2 Adults, 1 Child</p>
+                <label for="guests">Number of Guests</label>
+                <select id="guests" name="guests" required>
+                  <option value="1">1 Person</option>
+                  <option value="2">2 People</option>
+                  <option value="3">3 People</option>
+                  <option value="4">4 People</option>
+                  <option value="5">5 People</option>
+                  <option value="6">6 People</option>
+                  <option value="7">7 People</option>
+                  
+                </select>
             </div>
-            <div class="price-tag">
-                ₹4000
-            </div>
+            <div class="price-tag" id="destination-price"></div>
         </div>
 
         <div class="booking-form">
@@ -303,11 +364,12 @@
                     <label for="special-requests">Special Requests</label>
                     <input type="text" id="special-requests" placeholder="Any special requests?">
                 </div>
-                <button type="submit" class="booking-button">Book Now</button>
+                <a href="receipt.html" class="booking-button" style="width: 200px;"> Book Now</a>
             </form>
         </div>
     </div>
 
+    
     <footer>
         <div class="footer-container">
             <div class="footer-section">
@@ -321,7 +383,7 @@
                     <li><a href="#gallery">Traveler Stories</a></li>
                     <li><a href="#contact">Contact Us</a></li>
                     <li><a href="#faq">FAQs</a></li>
-                </ul>
+                </ul>git
             </div>
             <div class="footer-section">
                 <h3>Contact Us</h3>
@@ -334,6 +396,36 @@
         </div>
     </footer>
 
+    <script> </script>
 
+
+</body>
+</html>
+
+
+
+
+
+
+    <script>
+        // Retrieve the stored destination data from localStorage
+        const destinationData = JSON.parse(localStorage.getItem('selectedDestination'));
+
+        if (destinationData) {
+            // Populate the booking page with the destination details
+            document.getElementById('destination-name').textContent = destinationData.name;
+            document.getElementById('destination-location').textContent = destinationData.location;
+            document.getElementById('destination-description').textContent = destinationData.description;
+            document.getElementById('destination-price').textContent = destinationData.price;
+            document.getElementById('destination-image').src = destinationData.image;
+          
+        } else {
+            // Handle the case where no data is available (e.g., direct access to booknow.html)
+            alert('No destination selected!');
+        }
+
+
+       
+    </script>
 </body>
 </html>
